@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-border: none;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <Hyperlink layoutX="258.0" layoutY="229.0" prefHeight="23.0" prefWidth="285.0" stylesheets="@../CSS/newfile.css" text="Log in as a user">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="258.0" layoutY="266.0" prefHeight="23.0" prefWidth="285.0" stylesheets="@../CSS/newfile.css" text="Admin log in">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="258.0" layoutY="304.0" prefHeight="23.0" prefWidth="285.0" stylesheets="@../CSS/newfile.css" text="Investigator log in">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <JFXButton layoutX="595.0" layoutY="37.0" prefHeight="37.0" prefWidth="82.0" ripplerFill="#aa0e0e" stylesheets="@../CSS/newfile.css" text="বাংলা" />
+      <JFXButton layoutX="684.0" layoutY="37.0" prefHeight="37.0" prefWidth="82.0" ripplerFill="#aa0e0e" stylesheets="@../CSS/newfile.css" text="English" />
+   </children>
+</AnchorPane>
