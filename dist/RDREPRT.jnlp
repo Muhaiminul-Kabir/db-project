@@ -8,8 +8,9 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="RDREPRT.jar" size="2553517" download="eager" />
+    <jar href="RDREPRT.jar" size="3454749" download="eager" />
     <jar href="lib\jfoenix-8.0.10.jar" size="2710207" download="eager" />
+    <jar href="lib\mssql-jdbc-7.4.1.jre8.jar" size="1209659" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="RDREPRT" >
     <param name="requiredFXVersion" value="8.0+"/>

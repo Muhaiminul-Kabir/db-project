@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-border: none;" stylesheets="@newfile.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rdreprt.WcController">
+   <children>
+      <JFXButton fx:id="bt0" layoutX="240.0" layoutY="207.0" onAction="#btClick0" prefHeight="43.0" prefWidth="270.0" text="Log in as user">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="bt1" layoutX="240.0" layoutY="261.0" onAction="#btClick1" prefHeight="43.0" prefWidth="270.0" text="Admin Login">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="bt2" layoutX="240.0" layoutY="315.0" onAction="#btClick2" prefHeight="43.0" prefWidth="270.0" text="Investigator login">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Hyperlink alignment="CENTER" layoutX="260.0" layoutY="413.0" onAction="#toRegistry" prefHeight="34.0" prefWidth="231.0" text="Don't have a account?Register to report" />
+   </children>
+</AnchorPane>

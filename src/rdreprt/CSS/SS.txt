@@ -1,3 +1,0 @@
-go to Control Panel > System and Security > System > Advanced System Settings > Advanced (tab) > Performance Settings... > Visual Effects (tab)
-Uncheck Fade or slide menus into view
-Apply changes

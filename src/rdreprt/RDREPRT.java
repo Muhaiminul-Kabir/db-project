@@ -5,6 +5,7 @@
  */
 package rdreprt;
 
+import rdreprt.Utility.Misc;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -14,7 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
+import javafx.stage.Stage; 
 
 /**
  *
@@ -24,13 +25,8 @@ public class RDREPRT extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root1 = FXMLLoader.load(getClass().getResource("FXML/wc.fxml"));
-        Stage stage2 = new Stage();
-        Scene scene = new Scene(root1);
-        stage2.setTitle("RDREPRT");
-        stage2.setScene(scene);
-        stage2.show();
-        
+        Parent root1 = FXMLLoader.load(getClass().getResource("wc.fxml"));
+        Misc.changeTo(root1);
        
     }
 
