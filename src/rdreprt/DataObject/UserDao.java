@@ -28,7 +28,7 @@ public class UserDao {
         ArrayList<String> divId = DataBase.getDataList("SELECT DivisionId FROM Division WHERE DivisionName = '" + localUser.getDiv() + "'  ;", "DivisionId");
         ArrayList<String> upzId = DataBase.getDataList("SELECT UpazilaId FROM Upazilas WHERE UpazilaName = '" + localUser.getUpz() + "'  ;", "UpazilaId");
 
-        DataBase.runQuery("INSERT INTO USERS "
+        DataBase.runQuery("INSERT INTO Users "
                 + "VALUES"
                 + "("
                 + "'" + localUser.getType() + "',"
