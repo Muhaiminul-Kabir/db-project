@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -10,16 +11,16 @@
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" styleClass="mainFxmlClass" stylesheets="@newfile.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rdreprt.LoginController">
    
    <children>
-      <JFXTextField fx:id="mobileField" layoutX="450.0" layoutY="219.0" prefHeight="50.0" prefWidth="301.0" promptText="Mobile no." />
-      <JFXPasswordField fx:id="passField" layoutX="450.0" layoutY="302.0" prefHeight="50.0" prefWidth="301.0" promptText="Password" />
-      <JFXButton fx:id="loginButton" layoutX="494.0" layoutY="420.0" prefHeight="50.0" prefWidth="213.0" stylesheets="@../CSS/newfile.css" text="Log in" />
-      <Label fx:id="l1" alignment="CENTER" layoutX="450.0" layoutY="130.0" prefHeight="70.0" prefWidth="301.0" text="Label">
+      <JFXTextField fx:id="mobileField" layoutX="300.0" layoutY="193.0" prefHeight="50.0" prefWidth="301.0" promptText="Mobile no." />
+      <JFXPasswordField fx:id="passField" layoutX="300.0" layoutY="276.0" prefHeight="50.0" prefWidth="301.0" promptText="Password" />
+      <JFXButton fx:id="loginButton" layoutX="344.0" layoutY="394.0" prefHeight="50.0" prefWidth="213.0" stylesheets="@../CSS/newfile.css" text="Log in" />
+      <Label fx:id="l1" alignment="CENTER" layoutX="300.0" layoutY="104.0" prefHeight="70.0" prefWidth="301.0" text="Label">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton fx:id="gb" layoutX="494.0" layoutY="486.0" onAction="#goBack" prefHeight="31.0" prefWidth="78.0" stylesheets="@newfile.css" text="Go Back" />
-      <Label layoutX="450.0" layoutY="276.0" prefHeight="24.0" prefWidth="139.0" textFill="#f20707" />
-      <Label layoutX="450.0" layoutY="358.0" prefHeight="24.0" prefWidth="139.0" textFill="#eb0303" />
+      <Label layoutX="300.0" layoutY="250.0" prefHeight="24.0" prefWidth="139.0" textFill="#f20707" />
+      <Label layoutX="300.0" layoutY="332.0" prefHeight="24.0" prefWidth="139.0" textFill="#eb0303" />
+      <Hyperlink alignment="CENTER" layoutX="335.0" layoutY="461.0" onAction="#toRegistry" prefHeight="34.0" prefWidth="231.0" text="Don't have a account?Register to report" />
    </children>
 </AnchorPane>

@@ -24,8 +24,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import static javafx.scene.input.KeyCode.T;
+import rdreprt.DataObject.GeoCodeDao;
+import rdreprt.Entity.GeoCode;
 import static rdreprt.Utility.DataBase.connectDb;
 import rdreprt.Entity.User;
+import rdreprt.Utility.Misc;
+import static rdreprt.Utility.Misc.validateAge;
+import static rdreprt.Utility.Misc.validateEmail;
+import static rdreprt.Utility.Misc.validateMobile;
+import static rdreprt.Utility.Misc.validateName;
+import static rdreprt.Utility.Misc.validatePass;
 
 /**
  * FXML Controller class
@@ -56,6 +64,9 @@ public class SignupController implements Initializable {
     private JFXComboBox<String> userBG;
     @FXML
     private JFXButton regB;
+
+    GeoCode userGeoCode;
+    GeoCodeDao gcProc;
 
     /**
      * Initializes the controller class.
@@ -89,16 +100,19 @@ public class SignupController implements Initializable {
                 userBG.getValue(),
                 userEmail.getText()
         );
+
         
         
-        if(validate()){
+        if (validateRegistry()) {
             UserDao uproc = new UserDao(newUser);
             uproc.add();
         }
 
     }
-
-    private boolean validate() {
+    
+    
+    
+    public boolean validateRegistry() {
         boolean a = validateName();
         boolean b = validatePass();
         boolean c = validateAge();
@@ -109,26 +123,6 @@ public class SignupController implements Initializable {
         }
         return false;
 
-    }
-
-    private boolean validateName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private boolean validatePass() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private boolean validateAge() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private boolean validateEmail() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private boolean validateMobile() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private void initGender() throws SQLException, ClassNotFoundException {
@@ -148,9 +142,11 @@ public class SignupController implements Initializable {
     @FXML
     private void initDistrict() throws SQLException, ClassNotFoundException {
         String div = userDivision.getValue();
-        ArrayList<String> divId = DataBase.getDataList("SELECT DivisionId FROM Division WHERE DivisionName = '" + div + "'  ;", "DivisionId");
-
-        ArrayList<String> list = DataBase.getDataList("SELECT DistrictName FROM District WHERE DivisionId = " + divId.get(0) + ";", "DistrictName");
+        userGeoCode = new GeoCode(div);
+        gcProc = new GeoCodeDao(userGeoCode);
+        
+        ArrayList<String> list = gcProc.getDistList();
+        
         userDistrict.getItems().addAll(list);
 
     }
@@ -158,9 +154,11 @@ public class SignupController implements Initializable {
     @FXML
     private void initUpazilla() throws SQLException, ClassNotFoundException {
         String dist = userDistrict.getValue();
-        ArrayList<String> distId = DataBase.getDataList("SELECT DistrictId FROM District WHERE DistrictName = '" + dist + "'  ;", "DistrictId");
-
-        ArrayList<String> list = DataBase.getDataList("SELECT UpazilasName FROM Upazilas WHERE DistrictId = " + distId.get(0) + ";", "UpazilasName");
+        
+        userGeoCode.setDistName(dist);
+        ArrayList<String> list = gcProc.getUpzList();
+        
+        
         userUpazilla.getItems().addAll(list);
     }
 

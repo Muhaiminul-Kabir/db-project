@@ -46,7 +46,7 @@ public class DataBase {
     public static ArrayList getDataList(String SQLstring, String column) throws SQLException, ClassNotFoundException {
         Connection conn = connectDb();
         if (conn != null) {
-            System.out.println("hi");
+            System.out.println("connected...");
         }
 
         Statement stmt = conn.createStatement();

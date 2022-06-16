@@ -300,12 +300,31 @@ public class Misc {
         }
         return (directory.delete());
     }
-
-    /*
-    static String getUser() throws Exception {
-        return readFileAsString("src/StudyBase/current_user.txt") + "/";
+    
+    
+    
+    public static boolean validateName() {
+        return true;
     }
-     */
+
+    public static boolean validatePass() {
+        return true;
+    }
+
+    public static boolean validateAge() {
+        return true;
+
+    }
+
+    public static boolean validateEmail() {
+        return true;
+    }
+
+    public static boolean validateMobile() {
+        return true;
+    }
+    
+    
     
 
 }

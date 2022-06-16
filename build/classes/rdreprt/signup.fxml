@@ -20,11 +20,11 @@
       <Label layoutX="110.0" layoutY="135.0" prefHeight="51.0" prefWidth="100.0" text="Name" />
       <Label layoutX="110.0" layoutY="203.0" prefHeight="51.0" prefWidth="100.0" text="Age" />
       <JFXTextField fx:id="userMobile" layoutX="528.0" layoutY="203.0" prefHeight="51.0" prefWidth="162.0" />
-      <JFXComboBox fx:id="userUnion" layoutX="528.0" layoutY="135.0" prefHeight="51.0" prefWidth="162.0" />
+      <JFXTextField fx:id="userEmail" layoutX="528.0" layoutY="135.0" prefHeight="51.0" prefWidth="162.0" />
       <JFXComboBox fx:id="userGender" layoutX="528.0" layoutY="270.0" prefHeight="51.0" prefWidth="162.0" />
       <Label layoutX="428.0" layoutY="270.0" prefHeight="51.0" prefWidth="100.0" text="Gender" />
       <Label layoutX="428.0" layoutY="203.0" prefHeight="51.0" prefWidth="100.0" text="Mobile No." />
-      <Label layoutX="428.0" layoutY="135.0" prefHeight="51.0" prefWidth="100.0" text="Union" />
+      <Label layoutX="428.0" layoutY="135.0" prefHeight="51.0" prefWidth="100.0" text="Email" />
       <JFXTextField fx:id="userPass" layoutX="528.0" layoutY="414.0" prefHeight="51.0" prefWidth="162.0" />
       <Label layoutX="428.0" layoutY="414.0" prefHeight="51.0" prefWidth="100.0" text="Password" />
       <JFXComboBox fx:id="userBG" layoutX="528.0" layoutY="340.0" prefHeight="51.0" prefWidth="162.0" />

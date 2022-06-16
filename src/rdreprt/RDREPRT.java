@@ -25,7 +25,7 @@ public class RDREPRT extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root1 = FXMLLoader.load(getClass().getResource("wc.fxml"));
+        Parent root1 = FXMLLoader.load(getClass().getResource("login.fxml"));
         Misc.changeTo(root1);
        
     }

@@ -10,7 +10,8 @@ package rdreprt.Entity;
  * @author ASUS
  */
 public class User {
-
+    private String type = "normal-user";
+    
     private String name;
     private int age;
     private String mobile;
@@ -24,8 +25,10 @@ public class User {
 
     public User(String name, int age, String mobile, String div, String dist, String upz, String password, String gender, String bg,String email) {
 
+        
         this.name = name;
         this.age = age;
+        this.mobile = mobile;
         this.div = div;
         this.dist = dist;
         this.upz = upz;
@@ -40,6 +43,12 @@ public class User {
         
     }
 
+    
+    
+    public void setType(String type) {
+
+        this.type = type;
+    }
     
     public void setName(String name) {
 
@@ -84,6 +93,13 @@ public class User {
     public void setMobile(String mobile) {
 
         this.name = mobile;
+    }
+
+    
+    
+    public String getType() {
+
+        return type;
     }
 
     

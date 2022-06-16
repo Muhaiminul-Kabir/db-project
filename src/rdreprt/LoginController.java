@@ -35,14 +35,14 @@ public class LoginController {
     }
     
     @FXML
-    private void goBack(ActionEvent e) throws IOException{
-        Misc.closeWindowOnButton(gb);
+    private void toRegistry(ActionEvent e) throws IOException{
+        
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource(
-                        "/rdreprt/wc.fxml"
+                        "/rdreprt/signup.fxml"
                 ));
         Parent root = loader.load();
-        WcController ctrl = loader.getController();
+        SignupController ctrl = loader.getController();
         
         
         
