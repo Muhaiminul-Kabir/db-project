@@ -163,7 +163,7 @@ public class SignupController implements Initializable {
     }
 
     private void initBG() {
-        String[] choice = {"A+", "A-", "O+", "O-", "AB+", "AB-"};
+        String[] choice = {"A+", "A-", "O+", "O-","B+","B-", "AB+", "AB-"};
         userBG.getItems().addAll(choice);
         userBG.setValue("A+");
     }
