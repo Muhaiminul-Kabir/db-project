@@ -26,7 +26,6 @@ import javafx.fxml.Initializable;
 import static javafx.scene.input.KeyCode.T;
 import rdreprt.DataObject.GeoCodeDao;
 import rdreprt.Entity.GeoCode;
-import static rdreprt.Utility.DataBase.connectDb;
 import rdreprt.Entity.User;
 import rdreprt.Utility.Misc;
 import static rdreprt.Utility.Misc.validateAge;
@@ -66,7 +65,7 @@ public class SignupController implements Initializable {
     private JFXButton regB;
 
     GeoCode userGeoCode;
-    GeoCodeDao gcProc;
+    GeoCodeDao geoCodeData;
 
     /**
      * Initializes the controller class.
@@ -104,8 +103,8 @@ public class SignupController implements Initializable {
         
         
         if (validateRegistry()) {
-            UserDao uproc = new UserDao(newUser);
-            uproc.add();
+            UserDao userData = new UserDao(newUser);
+            userData.add();
         }
 
     }
@@ -143,9 +142,9 @@ public class SignupController implements Initializable {
     private void initDistrict() throws SQLException, ClassNotFoundException {
         String div = userDivision.getValue();
         userGeoCode = new GeoCode(div);
-        gcProc = new GeoCodeDao(userGeoCode);
+        geoCodeData = new GeoCodeDao(userGeoCode);
         
-        ArrayList<String> list = gcProc.getDistList();
+        ArrayList<String> list = geoCodeData.getDistList();
         
         userDistrict.getItems().addAll(list);
 
@@ -156,7 +155,7 @@ public class SignupController implements Initializable {
         String dist = userDistrict.getValue();
         
         userGeoCode.setDistName(dist);
-        ArrayList<String> list = gcProc.getUpzList();
+        ArrayList<String> list = geoCodeData.getUpzList();
         
         
         userUpazilla.getItems().addAll(list);

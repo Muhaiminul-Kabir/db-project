@@ -18,23 +18,10 @@ import java.util.ArrayList;
  */
 public class DataBase {
     
-    
-    
-    public static Connection connectDb() throws SQLException, ClassNotFoundException {
-
-        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        String dburl = "jdbc:sqlserver://LAPTOP-P2UO0UDH\\NIRJONSQL:1433;databaseName=BDInfo";
-
-        Connection con = null;
-        con = DriverManager.getConnection(dburl, "sa", "asdfghjkl");
-        return con;
-    }
-
-    
-
     public static void runQuery(String SQLString) throws SQLException, ClassNotFoundException {
-        Connection conn = connectDb();
-
+        ConnectServer db = new ConnectServer();
+        Connection conn = db.connectDb();
+        
         Statement stmt = conn.createStatement();
 
         String query = SQLString;
@@ -44,7 +31,10 @@ public class DataBase {
     }
 
     public static ArrayList getDataList(String SQLstring, String column) throws SQLException, ClassNotFoundException {
-        Connection conn = connectDb();
+        
+        ConnectServer db = new ConnectServer();
+        Connection conn = db.connectDb();
+        
         if (conn != null) {
             System.out.println("connected...");
         }
