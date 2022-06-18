@@ -1,8 +1,13 @@
+
+
+
+--CREATE DATABASE
+
+CREATE DATABASE BDInfo;
+
+--DEFINE DATABASE
+
 USE BDInfo
-
-
-
-
 
 
 
@@ -46,7 +51,7 @@ INSERT INTO Division VALUES
 
 
 CREATE TABLE Districts (
-  DistrictId int PRIMARY KEYA NOT NULL,
+  DistrictId int PRIMARY KEY NOT NULL,
   DivisionId int FOREIGN KEY REFERENCES Division(DivisionId) NOT NULL,
   DistrictName varchar(25) NOT NULL,
   bn_name varchar(25) NOT NULL,

@@ -111,7 +111,7 @@ public class SignupController implements Initializable {
     
     
     
-    public boolean validateRegistry() {
+    private boolean validateRegistry() {
         boolean a = validateName();
         boolean b = validatePass();
         boolean c = validateAge();
@@ -123,6 +123,31 @@ public class SignupController implements Initializable {
         return false;
 
     }
+
+    private boolean validateName() {
+        return true;
+    }
+
+    private boolean validatePass() {
+        return true;
+    }
+
+    private boolean validateAge() {
+        return true;
+
+    }
+
+    private boolean validateEmail() {
+        return true;
+    }
+
+    private boolean validateMobile() {
+        return true;
+    }
+    
+
+
+
 
     private void initGender() throws SQLException, ClassNotFoundException {
 
@@ -162,7 +187,7 @@ public class SignupController implements Initializable {
     }
 
     private void initBG() {
-        String[] choice = {"A+", "A-", "O+", "O-", "AB+", "AB-"};
+        String[] choice = {"A+", "A-", "O+", "O-","B+","B-", "AB+", "AB-"};
         userBG.getItems().addAll(choice);
         userBG.setValue("A+");
     }
