@@ -7,6 +7,8 @@ CREATE TABLE Users(
 	UserName VARCHAR(255) NOT NULL,
 	UserAge INT NOT NULL,
 	UserMobile VARCHAR(50) UNIQUE NOT NULL,
+	DivisionId INT FOREIGN KEY REFERENCES Division(DivisionId),
+	DistricId INT FOREIGN KEY REFERENCES Districts(DistrictId),
 	UpazilaId INT FOREIGN KEY REFERENCES Upazilas(UpazilaId),
 	UserPassword VARCHAR(255) NOT NULL,
 	UserGender VARCHAR(10),

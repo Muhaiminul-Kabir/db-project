@@ -28,17 +28,7 @@ import rdreprt.DataObject.GeoCodeDao;
 import rdreprt.Entity.GeoCode;
 import rdreprt.Entity.User;
 import rdreprt.Utility.Misc;
-import static rdreprt.Utility.Misc.validateAge;
-import static rdreprt.Utility.Misc.validateEmail;
-import static rdreprt.Utility.Misc.validateMobile;
-import static rdreprt.Utility.Misc.validateName;
-import static rdreprt.Utility.Misc.validatePass;
 
-/**
- * FXML Controller class
- *
- * @author ASUS
- */
 public class SignupController implements Initializable {
 
     @FXML

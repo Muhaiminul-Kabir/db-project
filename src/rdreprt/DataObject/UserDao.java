@@ -25,6 +25,8 @@ public class UserDao {
     public void add() throws SQLException, ClassNotFoundException {
 
         ArrayList<String> upzId = DataBase.getDataList("SELECT UpazilaId FROM Upazilas WHERE UpazilaName = '" + localUser.getUpz() + "'  ;", "UpazilaId");
+        ArrayList<String> distId = DataBase.getDataList("SELECT DistrictId FROM Districts WHERE DistrictName = '" + localUser.getDist()+ "'  ;", "DistrictId");
+        ArrayList<String> divId = DataBase.getDataList("SELECT DivisionId FROM Sivision WHERE DivisionName = '" + localUser.getDiv()+ "'  ;", "DivisionId");
 
         DataBase.runQuery("INSERT INTO Users "
                 + "VALUES"
