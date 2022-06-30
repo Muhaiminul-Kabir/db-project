@@ -14,7 +14,7 @@ CREATE TABLE Users(
 	UserGender VARCHAR(10),
 	UserBg VARCHAR(5),  
 	UserEmail VARCHAR(255) UNIQUE NOT NULL,
-	UserOccupation VARCHAR
+	
 	  
 
 
